@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Alquiler de Bicicletas</title>
+    <link rel="stylesheet" href="../css/reservas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <iframe src="./nav.html" width="100%" height="100" frameborder="0"
+            title="Barra de navegación principal"></iframe>
+        <h1>Reserva tu bicicleta</h1>
+        <p>Horario de atención: Lunes a domingo de 7:00 a. m. a 6:00 p. m.</p>
+        <a href="mailto:joselondono0507@gmail.com">Enviar correo electrónico de consulta</a>
+    </header>
+
+    <main>
+        <form class="form-control" action="" method="POST">
+
+            <div class="info-usuario">
+                <h2>Información del usuario</h2>
+
+                <!-- Nombre completo: Obligatorio, mínimo 3 caracteres -->
+                <label for="nombre">Nombre completo *</label><br>
+                <input type="text" minlength="3" maxlength="100" name="nombre" id="nombre"
+                    placeholder="Ingrese aquí su nombre completo" required><br>
+
+                <!-- Documento: Obligatorio, solo números, entre 6 y 10 dígitos -->
+                <label for="documento">Número de documento *</label><br>
+                <input type="text" pattern="[0-9]{6,10}" maxlength="10" inputmode="numeric" name="documento"
+                    id="documento" title="Obligatorio, solo números entre 6 y 10 dígitos."
+                    placeholder="Ingrese su número de documento" required><br>
+
+                <!-- Correo: Obligatorio, formato válido -->
+                <label for="correo">Correo electrónico *</label><br>
+                <input type="email" name="correo" id="correo" placeholder="Ingrese aquí su correo electrónico"
+                    required><br>
+
+                <!-- Celular: Obligatorio, 10 dígitos y empieza por 3 -->
+                <label for="celular">Celular *</label><br>
+                <input type="tel" pattern="3[0-9]{9}" maxlength="10" inputmode="numeric" name="celular" id="celular"
+                    title="Obligatorio, 10 dígitos y debe empezar por 3." placeholder="Ej: 3001234567" required><br>
+            </div>
+
+            <div class="info-alquiler">
+                <h2>Información del alquiler</h2>
+
+                <!-- Fecha del alquiler: Obligatoria, entre 1 nov y 31 dic de 2026 -->
+                <label for="fecha-alquiler">Fecha de alquiler *</label><br>
+                <input type="date" name="fecha_alquiler" id="fecha-alquiler" min="2026-11-01" max="2026-12-31"
+                    required><br>
+
+                <!-- Tipo de bicicleta: Obligatorio -->
+                <label for="tipo-bicicleta">Tipo de bicicleta *</label><br>
+                <select name="tipo_bicicleta" id="tipo-bicicleta" required>
+                    <option value="">Seleccione el tipo de bicicleta</option>
+                    <option value="urbana">Urbana</option>
+                    <option value="montana">Montaña</option>
+                    <option value="electrica">Eléctrica</option>
+                </select><br>
+
+                <!-- Plan o Recorrido: Obligatorio -->
+                <label for="plan">Plan o recorrido *</label><br>
+                <select name="plan" id="plan" required>
+                    <option value="">Seleccione un plan</option>
+                    <option value="recorrido_1">Recorrido 1 (Por horas)</option>
+                    <option value="recorrido_2">Recorrido 2 (Medio día)</option>
+                    <option value="recorrido_3">Recorrido 3 (Día completo)</option>
+                </select><br>
+
+                <!-- Cantidad de bicicletas: Obligatoria, entre 1 y 6 -->
+                <label for="cantidad">Cantidad de bicicletas *</label><br>
+                <input type="number" name="cantidad" id="cantidad" min="1" max="6" placeholder="Entre 1 y 6 bicicletas"
+                    required><br>
+
+                <!-- Comentarios: Opcional, máximo 300 caracteres -->
+                <label for="comentarios">Comentarios (opcional)</label><br>
+                <textarea name="comentarios" id="comentarios" maxlength="300" rows="4"
+                    placeholder="Escriba aquí sus comentarios (máximo 300 caracteres)"></textarea><br>
+
+                <!-- Políticas de alquiler: Obligatorio aceptarlas -->
+                <div class="campo-checkbox">
+                    <input type="checkbox" name="politicas" id="terminos-condiciones" required>
+                    <label for="terminos-condiciones">Acepto las políticas de alquiler *</label>
+                </div>
+
+                <button type="submit">Reservar bicicleta</button>
+            </div>
+
+        </form>
+    </main>
+</body>
+
+</html>

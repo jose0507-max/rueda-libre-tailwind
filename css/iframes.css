@@ -1,0 +1,33 @@
+a{
+    text-decoration: none;
+    
+}
+a:hover{
+    color: gray;
+}
+a:focus{
+    border-bottom: 1px solid black;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.brand{
+    width: 40%;
+    display: flex;
+
+}
+.logo{
+    width: 10%;
+}
+
+nav{
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    flex-wrap: wrap;
+    
+}

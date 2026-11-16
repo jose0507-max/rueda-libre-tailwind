@@ -1,0 +1,194 @@
+.form-control {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+}
+/* =========================================================
+   ESTILOS DE ACCESIBILIDAD Y PALETA DE MARCA (WCAG)
+   ========================================================= */
+
+/* 1. Indicador visual obligatorio para recorrido con teclado */
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 3px solid #1E7A4F; /* Verde Ruta */
+  outline-offset: 2px;
+}
+
+/* 2. Fondo general y colores de texto principales */
+body {
+  background-color: #FAF6EF; /* Crema */
+  color: #14213D; /* Azul Noche (Contraste 14.83:1) */
+}
+
+header {
+  background-color: #14213D; /* Azul Noche */
+  color: #FFFFFF; /* Blanco (Contraste 15.97:1) */
+  padding: 1.5rem;
+}
+
+header a {
+  color: #F39A2B; /* Naranja Pedal sobre Azul Noche */
+  font-weight: bold;
+}
+
+h1, h2 {
+  color: #14213D; /* Azul Noche */
+}
+
+header h1 {
+  color: #FFFFFF; /* Blanco dentro del encabezado oscuro */
+}
+
+/* 3. Etiquetas y textos secundarios */
+label {
+  color: #14213D; /* Azul Noche */
+  font-weight: bold;
+}
+
+::placeholder {
+  color: #5B6470; /* Gris Asfalto (Contraste 5.57:1) */
+}
+
+/* 4. Unificación visual para los nuevos campos (celular, cantidad, comentarios) */
+.form-control input[type="text"],
+.form-control input[type="email"],
+.form-control input[type="tel"],
+.form-control input[type="date"],
+.form-control input[type="number"],
+.form-control select,
+.form-control textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  border: 1px solid #5B6470; /* Gris Asfalto */
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  color: #14213D;
+  font-family: inherit;
+}
+
+/* 5. Botón principal (Blanco sobre Verde Ruta - Contraste 5.31:1) */
+.form-control button[type="submit"] {
+  background-color: #1E7A4F; /* Verde Ruta */
+  color: #FFFFFF; /* Blanco */
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-control button[type="submit"]:hover {
+  background-color: #14213D; /* Azul Noche al pasar el cursor */
+}
+
+/* =========================================================
+   1. VARIABLES GLOBALES DE MARCA (:root)
+   ========================================================= */
+:root {
+  /* Paleta de colores aprobada */
+  --color-verde-ruta: #1E7A4F;
+  --color-naranja-pedal: #F39A2B;
+  --color-azul-noche: #14213D;
+  --color-crema: #FAF6EF;
+  --color-gris-asfalto: #5B6470;
+  --color-blanco: #FFFFFF;
+
+  /* Familias tipográficas con fuentes de respaldo */
+  --fuente-titulos: 'Montserrat', sans-serif;
+  --fuente-texto: 'Open Sans', sans-serif;
+
+  /* Escala de espaciado en rem */
+  --espacio-sm: 0.5rem;
+  --espacio-md: 1rem;
+  --espacio-lg: 2rem;
+}
+
+/* =========================================================
+   2. ESTILOS BASE Y HERENCIA EN BODY
+   ========================================================= */
+body {
+  font-family: var(--fuente-texto);
+  font-weight: 400;
+  color: var(--color-azul-noche); /* Contraste 14.83:1 sobre Crema */
+  background-color: var(--color-crema);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Selector agrupado para todos los encabezados */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  color: var(--color-azul-noche);
+  margin-top: 0;
+  margin-bottom: var(--espacio-md);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--espacio-md);
+}
+
+/* =========================================================
+   3. COMPONENTES Y COMBINACIONES APROBADAS (WCAG)
+   ========================================================= */
+header, footer {
+  background-color: var(--color-azul-noche);
+  color: var(--color-blanco); /* Contraste 15.97:1 */
+  padding: var(--espacio-lg);
+}
+
+header h1, header h2, footer h2 {
+  color: var(--color-blanco);
+}
+
+a {
+  color: var(--color-verde-ruta); /* Contraste 4.93:1 sobre Crema */
+  font-weight: 600;
+}
+
+header a, footer a {
+  color: var(--color-naranja-pedal); /* Contraste 7.20:1 sobre Azul Noche */
+}
+
+/* Botones principales y formularios */
+button, .btn-principal {
+  font-family: var(--fuente-texto);
+  font-weight: 600;
+  background-color: var(--color-verde-ruta);
+  color: var(--color-blanco); /* Contraste 5.31:1 */
+  border: none;
+  padding: var(--espacio-sm) var(--espacio-lg);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover, .btn-principal:hover {
+  background-color: var(--color-azul-noche);
+}
+
+.btn-secundario, .destacado {
+  background-color: var(--color-naranja-pedal);
+  color: var(--color-azul-noche); /* Contraste 7.20:1 */
+  font-weight: 600;
+  padding: var(--espacio-sm) var(--espacio-md);
+}
+
+/* Navegación accesible con teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-verde-ruta);
+  outline-offset: 2px;
+}

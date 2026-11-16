@@ -1,0 +1,14 @@
+Registra en la bitácora: la URL completa, el protocolo, el host, el puerto, la ruta, el método de la petición y el código de estado.
+1. url: http://127.0.0.1:5500/index.html
+protocol: http
+port: 5500
+route: /index.html
+method: GET
+status code: 304
+
+2. El servidor responde 404, lo cual quiere decir que no encontró la ruta especificada
+
+3.HTML: Cumplirá el rol de estructura, será el esqueleto de mi código, son como las columnas de un edificio
+CSS: Con el haré que la página web se vea estéticamente presentable, sirve para decoras y hacer que la estructura que hice en HTML coja forma y calidad visual, como la pintura, el reboque y el enchape en del edificio.
+
+JavaScript: Será quien me permita darle vida al sitio, y todo lo que tiene que ver con funcionalidad en las partes en las que el usuario interactua con la pagina, es como la elkectricidad del edificio
