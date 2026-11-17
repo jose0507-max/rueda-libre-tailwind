@@ -3,211 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Alquila bicicletas en Medellín y descubre la ciudad a tu propio ritmo con Rueda Libre.">
-  <title>Rueda Libre | Medellín sobre dos ruedas</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <title>Rueda Libre | Alquiler de bicicletas</title>
   <link rel="stylesheet" href="./css/tailwind.css">
 </head>
 <body>
-  <header class="sticky top-0 z-30 border-b border-line bg-cream/95 backdrop-blur">
-    <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-4 sm:px-8" aria-label="Navegación principal">
-      <a class="flex items-center gap-3" href="./index.html" aria-label="Rueda Libre, inicio">
-        <img class="h-11 w-11 rounded-full object-cover" src="./img/logo.jpeg" alt="">
-        <span class="font-display text-xl font-extrabold tracking-tight text-forest">rueda<span class="text-ink">libre.</span></span>
+  <!-- Navegación -->
+  <header class="bg-white shadow">
+    <nav class="mx-auto flex max-w-6xl flex-wrap items-center justify-between p-4">
+      <a class="flex items-center gap-2 text-xl font-bold text-green-800" href="./index.html">
+        <img class="h-12 w-12 rounded-full" src="./img/logo.jpeg" alt="Logo de Rueda Libre">
+        Rueda Libre
       </a>
-      <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-semibold text-ink">
-        <a class="transition hover:text-forest" href="./index.html" aria-current="page">Inicio</a>
-        <a class="transition hover:text-forest" href="./html/tarifas.html">Tarifas</a>
-        <a class="transition hover:text-forest" href="#flota">Bicicletas</a>
-        <a class="rounded-full bg-forest px-5 py-2.5 text-white transition hover:bg-ink" href="./html/reservas.html">Reserva ahora <span aria-hidden="true">↗</span></a>
+      <div class="flex gap-4 py-2">
+        <a class="text-green-800 hover:underline" href="./index.html">Inicio</a>
+        <a class="text-green-800 hover:underline" href="./html/tarifas.html">Tarifas</a>
+        <a class="text-green-800 hover:underline" href="#flota">Bicicletas</a>
+        <a class="rounded bg-green-800 px-3 py-2 text-white hover:bg-green-900" href="./html/reservas.html">Reservar</a>
       </div>
     </nav>
   </header>
 
   <main>
-    <section class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[1fr_0.95fr] lg:py-24">
+    <!-- Portada -->
+    <section class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-6 p-6 md:grid-cols-2">
       <div>
-        <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-line bg-paper px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-forest">
-          <span class="h-2 w-2 rounded-full bg-coral"></span> Medellín, Colombia
-        </p>
-        <h1 class="max-w-2xl font-display text-5xl font-extrabold leading-[1.05] tracking-tight text-ink sm:text-6xl lg:text-7xl">
-          La ciudad se ve mejor <span class="text-forest">en bici.</span>
-        </h1>
-        <p class="mt-6 max-w-xl text-lg leading-8 text-muted">
-          Alquila tu bicicleta y encuentra otra forma de recorrer Medellín. Fácil, flexible y a tu propio ritmo.
-        </p>
-        <div class="mt-8 flex flex-wrap items-center gap-4">
-          <a class="inline-flex items-center gap-3 rounded-full bg-leaf px-6 py-3.5 font-bold text-ink transition hover:-translate-y-0.5 hover:shadow-lg" href="./html/reservas.html">
-            Encuentra tu bici <span aria-hidden="true">↗</span>
-          </a>
-          <a class="px-3 py-3 font-semibold text-forest underline decoration-line underline-offset-4 hover:decoration-forest" href="#como-funciona">Cómo funciona</a>
-        </div>
-        <div class="mt-12 flex items-center gap-4 border-t border-line pt-6">
-          <div class="flex -space-x-3" aria-hidden="true">
-            <img class="h-10 w-10 rounded-full border-2 border-cream object-cover" src="./img/plegable.jpeg" alt="">
-            <img class="h-10 w-10 rounded-full border-2 border-cream object-cover" src="./img/trail.jpeg" alt="">
-            <img class="h-10 w-10 rounded-full border-2 border-cream object-cover" src="./img/electrica.jpeg" alt="">
-          </div>
-          <p class="text-sm text-muted"><span class="font-bold text-ink">Una bici para cada plan.</span><br>Tu próxima aventura empieza aquí.</p>
-        </div>
+        <p class="mb-2 text-green-800">Alquiler de bicicletas en Medellín</p>
+        <h1 class="text-4xl font-bold">La ciudad se ve mejor en bici</h1>
+        <p class="my-4 text-gray-700">Alquila una bicicleta y recorre Medellín a tu propio ritmo.</p>
+        <a class="inline-block rounded bg-green-800 px-4 py-2 text-white hover:bg-green-900" href="./html/reservas.html">Reserva ahora</a>
+        <a class="ml-3 text-green-800 underline" href="#como-funciona">Cómo funciona</a>
       </div>
-      <div class="relative">
-        <div class="absolute -left-5 -top-5 h-28 w-28 rounded-full bg-leaf sm:-left-7 sm:-top-7"></div>
-        <figure class="relative overflow-hidden rounded-[2rem] bg-forest shadow-xl">
-          <img class="h-[360px] w-full object-cover sm:h-[480px]" src="./img/bici.jpeg" alt="Bicicleta lista para salir a recorrer Medellín">
-          <figcaption class="absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-ink/80 to-transparent p-6 pt-20 text-white sm:p-8">
-            <div>
-              <p class="text-sm font-semibold text-leaf">TU RUTA, TUS REGLAS</p>
-              <p class="mt-1 font-display text-2xl font-bold">Sal a descubrir</p>
-            </div>
-            <span class="grid h-12 w-12 place-items-center rounded-full bg-leaf text-xl text-ink" aria-hidden="true">↗</span>
-          </figcaption>
-        </figure>
-        <div class="absolute -bottom-5 -left-3 rounded-2xl bg-paper px-5 py-4 shadow-lg sm:-left-8">
-          <p class="text-xs font-bold uppercase tracking-wider text-muted">Hecho para moverte</p>
-          <p class="mt-1 font-display text-lg font-extrabold text-forest">Pedalea sin afán.</p>
-        </div>
-      </div>
+      <img class="h-72 w-full rounded-lg object-cover" src="./img/bici.jpeg" alt="Bicicleta disponible para alquilar">
     </section>
 
-    <section class="bg-paper py-16 sm:py-20" aria-labelledby="about-title">
-      <div class="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-        <div>
-          <p class="text-sm font-bold uppercase tracking-[0.16em] text-forest">Un plan sencillo, un gran día</p>
-          <h2 id="about-title" class="mt-4 max-w-lg font-display text-3xl font-extrabold leading-tight sm:text-4xl">Menos vueltas para alquilar. Más vueltas para disfrutar.</h2>
-        </div>
-        <div class="grid gap-8 sm:grid-cols-2">
-          <p class="leading-7 text-muted">En Rueda Libre queremos que moverse por Medellín sea parte de la aventura. Elige la bicicleta y el tiempo que necesitas; nosotros ponemos el resto.</p>
-          <div class="rounded-2xl bg-cream p-6">
-            <p class="font-display text-lg font-extrabold text-forest">¿Cómo funciona?</p>
-            <ol id="como-funciona" class="mt-4 space-y-3 text-sm text-muted">
-              <li class="flex gap-3"><span class="font-bold text-coral">01</span> Elige tu bicicleta y plan.</li>
-              <li class="flex gap-3"><span class="font-bold text-coral">02</span> Completa tu solicitud de reserva.</li>
-              <li class="flex gap-3"><span class="font-bold text-coral">03</span> Recoge tu bici y disfruta el camino.</li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="flota" class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20" aria-labelledby="fleet-title">
-      <div class="flex flex-wrap items-end justify-between gap-5">
-        <div>
-          <p class="text-sm font-bold uppercase tracking-[0.16em] text-forest">Escoge tu compañera de ruta</p>
-          <h2 id="fleet-title" class="mt-3 font-display text-3xl font-extrabold sm:text-4xl">Nuestra flota</h2>
-        </div>
-        <a class="font-bold text-forest underline decoration-line underline-offset-4 hover:decoration-forest" href="./html/tarifas.html">Ver todas las tarifas <span aria-hidden="true">↗</span></a>
-      </div>
-      <div class="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        <article class="group overflow-hidden rounded-3xl border border-line bg-paper transition hover:-translate-y-1 hover:shadow-lg">
-          <img class="h-52 w-full object-cover transition duration-500 group-hover:scale-[1.03]" src="./img/bici.jpeg" alt="Bicicleta urbana clásica para recorrer la ciudad" loading="lazy">
-          <div class="p-6">
-            <div class="flex items-start justify-between gap-3"><h3 class="font-display text-xl font-extrabold">Urbana clásica</h3><span class="rounded-full bg-cream px-3 py-1 text-xs font-bold text-forest">Desde $10.000</span></div>
-            <p class="mt-2 text-sm leading-6 text-muted">Cómoda y liviana para recorrer las ciclorrutas.</p>
-            <a class="mt-5 inline-flex font-bold text-forest" href="./html/reservas.html">Reservar <span class="ml-2" aria-hidden="true">↗</span></a>
-          </div>
+    <!-- Información -->
+    <section class="bg-white py-8">
+      <div class="mx-auto grid max-w-6xl grid-cols-1 gap-4 p-4 md:grid-cols-2">
+        <article class="rounded border border-gray-200 p-5">
+          <h2 class="mb-2 text-2xl font-bold">¿Quiénes somos?</h2>
+          <p class="text-gray-700">Somos un servicio de alquiler de bicicletas en Medellín. Queremos ayudarte a conocer la ciudad de una forma diferente.</p>
         </article>
-        <article class="group overflow-hidden rounded-3xl border border-line bg-paper transition hover:-translate-y-1 hover:shadow-lg">
-          <img class="h-52 w-full object-cover transition duration-500 group-hover:scale-[1.03]" src="./img/plegable.jpeg" alt="Bicicleta plegable fácil de transportar" loading="lazy">
-          <div class="p-6">
-            <div class="flex items-start justify-between gap-3"><h3 class="font-display text-xl font-extrabold">Urbana plegable</h3><span class="rounded-full bg-cream px-3 py-1 text-xs font-bold text-forest">Desde $12.000</span></div>
-            <p class="mt-2 text-sm leading-6 text-muted">Práctica para combinar la bici con otros medios de transporte.</p>
-            <a class="mt-5 inline-flex font-bold text-forest" href="./html/reservas.html">Reservar <span class="ml-2" aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-        <article class="group overflow-hidden rounded-3xl border border-line bg-paper transition hover:-translate-y-1 hover:shadow-lg">
-          <img class="h-52 w-full object-cover transition duration-500 group-hover:scale-[1.03]" src="./img/trail.jpeg" alt="Bicicleta de montaña para caminos exigentes" loading="lazy">
-          <div class="p-6">
-            <div class="flex items-start justify-between gap-3"><h3 class="font-display text-xl font-extrabold">Montaña trail</h3><span class="rounded-full bg-cream px-3 py-1 text-xs font-bold text-forest">Desde $15.000</span></div>
-            <p class="mt-2 text-sm leading-6 text-muted">Suspensión y cambios para subir y explorar nuevos caminos.</p>
-            <a class="mt-5 inline-flex font-bold text-forest" href="./html/reservas.html">Reservar <span class="ml-2" aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-        <article class="group overflow-hidden rounded-3xl border border-line bg-paper transition hover:-translate-y-1 hover:shadow-lg">
-          <img class="h-52 w-full object-cover transition duration-500 group-hover:scale-[1.03]" src="./img/deruta.jpeg" alt="Bicicleta gravel para rutas mixtas" loading="lazy">
-          <div class="p-6">
-            <div class="flex items-start justify-between gap-3"><h3 class="font-display text-xl font-extrabold">Bicicleta gravel</h3><span class="rounded-full bg-cream px-3 py-1 text-xs font-bold text-forest">Desde $15.000</span></div>
-            <p class="mt-2 text-sm leading-6 text-muted">Lista para rutas de tierra y caminos sin asfaltar.</p>
-            <a class="mt-5 inline-flex font-bold text-forest" href="./html/reservas.html">Reservar <span class="ml-2" aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-        <article class="group overflow-hidden rounded-3xl border border-line bg-paper transition hover:-translate-y-1 hover:shadow-lg">
-          <img class="h-52 w-full object-cover transition duration-500 group-hover:scale-[1.03]" src="./img/electrica.jpeg" alt="Bicicleta eléctrica para trayectos largos" loading="lazy">
-          <div class="p-6">
-            <div class="flex items-start justify-between gap-3"><h3 class="font-display text-xl font-extrabold">Bicicleta eléctrica</h3><span class="rounded-full bg-cream px-3 py-1 text-xs font-bold text-forest">Desde $20.000</span></div>
-            <p class="mt-2 text-sm leading-6 text-muted">Un impulso extra para disfrutar trayectos más largos.</p>
-            <a class="mt-5 inline-flex font-bold text-forest" href="./html/reservas.html">Reservar <span class="ml-2" aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-        <article class="group overflow-hidden rounded-3xl border border-line bg-paper transition hover:-translate-y-1 hover:shadow-lg">
-          <img class="h-52 w-full object-cover transition duration-500 group-hover:scale-[1.03]" src="./img/infantil.jpeg" alt="Bicicleta infantil para pequeños exploradores" loading="lazy">
-          <div class="p-6">
-            <div class="flex items-start justify-between gap-3"><h3 class="font-display text-xl font-extrabold">Bicicleta infantil</h3><span class="rounded-full bg-cream px-3 py-1 text-xs font-bold text-forest">Desde $15.000</span></div>
-            <p class="mt-2 text-sm leading-6 text-muted">Para que los más pequeños también salgan a explorar.</p>
-            <a class="mt-5 inline-flex font-bold text-forest" href="./html/reservas.html">Reservar <span class="ml-2" aria-hidden="true">↗</span></a>
-          </div>
+        <article id="como-funciona" class="rounded border border-gray-200 p-5">
+          <h2 class="mb-2 text-2xl font-bold">¿Cómo alquilar?</h2>
+          <ol class="list-inside list-decimal space-y-1 text-gray-700">
+            <li>Escoge una bicicleta.</li>
+            <li>Selecciona el tiempo de alquiler.</li>
+            <li>Completa el formulario de reserva.</li>
+            <li>Recoge tu bicicleta y disfruta.</li>
+          </ol>
         </article>
       </div>
     </section>
 
-    <section class="bg-forest py-16 text-white sm:py-20" aria-labelledby="plans-title">
-      <div class="mx-auto max-w-7xl px-5 sm:px-8">
-        <div class="max-w-2xl">
-          <p class="text-sm font-bold uppercase tracking-[0.16em] text-leaf">Tú eliges cuánto dura el paseo</p>
-          <h2 id="plans-title" class="mt-3 font-display text-3xl font-extrabold sm:text-4xl">Un plan para cada ritmo.</h2>
-        </div>
-        <div class="mt-9 grid gap-5 md:grid-cols-3">
-          <article class="rounded-3xl bg-white/10 p-7 ring-1 ring-white/15">
-            <p class="text-sm font-bold text-leaf">01 / FLEXIBLE</p>
-            <h3 class="mt-4 font-display text-2xl font-extrabold">Por horas</h3>
-            <p class="mt-3 min-h-14 leading-7 text-white/75">Una escapada corta o una vuelta por tus lugares favoritos.</p>
-            <a class="mt-6 inline-flex rounded-full bg-leaf px-5 py-3 font-bold text-ink transition hover:bg-white" href="./html/reservas.html">Elegir este plan <span class="ml-2" aria-hidden="true">↗</span></a>
+    <!-- Bicicletas -->
+    <section id="flota" class="mx-auto max-w-6xl p-4 py-8">
+      <h2 class="mb-6 text-center text-3xl font-bold">Nuestras bicicletas</h2>
+      <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded border border-gray-200 bg-white p-4">
+          <img class="h-48 w-full rounded object-cover" src="./img/bici.jpeg" alt="Bicicleta urbana" loading="lazy">
+          <h3 class="mt-3 text-xl font-bold">Urbana clásica</h3>
+          <p class="my-2 text-gray-700">Cómoda para recorrer las ciclorrutas.</p>
+          <p class="font-bold text-green-800">Desde $10.000</p>
+          <a class="mt-3 inline-block text-green-800 underline" href="./html/reservas.html">Reservar</a>
+        </article>
+        <article class="rounded border border-gray-200 bg-white p-4">
+          <img class="h-48 w-full rounded object-cover" src="./img/plegable.jpeg" alt="Bicicleta plegable" loading="lazy">
+          <h3 class="mt-3 text-xl font-bold">Urbana plegable</h3>
+          <p class="my-2 text-gray-700">Fácil de transportar y guardar.</p>
+          <p class="font-bold text-green-800">Desde $12.000</p>
+          <a class="mt-3 inline-block text-green-800 underline" href="./html/reservas.html">Reservar</a>
+        </article>
+        <article class="rounded border border-gray-200 bg-white p-4">
+          <img class="h-48 w-full rounded object-cover" src="./img/trail.jpeg" alt="Bicicleta de montaña" loading="lazy">
+          <h3 class="mt-3 text-xl font-bold">Montaña trail</h3>
+          <p class="my-2 text-gray-700">Para caminos y recorridos más largos.</p>
+          <p class="font-bold text-green-800">Desde $15.000</p>
+          <a class="mt-3 inline-block text-green-800 underline" href="./html/reservas.html">Reservar</a>
+        </article>
+        <article class="rounded border border-gray-200 bg-white p-4">
+          <img class="h-48 w-full rounded object-cover" src="./img/deruta.jpeg" alt="Bicicleta gravel" loading="lazy">
+          <h3 class="mt-3 text-xl font-bold">Bicicleta gravel</h3>
+          <p class="my-2 text-gray-700">Para rutas de tierra y caminos destapados.</p>
+          <p class="font-bold text-green-800">Desde $15.000</p>
+          <a class="mt-3 inline-block text-green-800 underline" href="./html/reservas.html">Reservar</a>
+        </article>
+        <article class="rounded border border-gray-200 bg-white p-4">
+          <img class="h-48 w-full rounded object-cover" src="./img/electrica.jpeg" alt="Bicicleta eléctrica" loading="lazy">
+          <h3 class="mt-3 text-xl font-bold">Bicicleta eléctrica</h3>
+          <p class="my-2 text-gray-700">Una ayuda extra para subir las lomas.</p>
+          <p class="font-bold text-green-800">Desde $20.000</p>
+          <a class="mt-3 inline-block text-green-800 underline" href="./html/reservas.html">Reservar</a>
+        </article>
+        <article class="rounded border border-gray-200 bg-white p-4">
+          <img class="h-48 w-full rounded object-cover" src="./img/infantil.jpeg" alt="Bicicleta infantil" loading="lazy">
+          <h3 class="mt-3 text-xl font-bold">Bicicleta infantil</h3>
+          <p class="my-2 text-gray-700">Para que los más pequeños también disfruten.</p>
+          <p class="font-bold text-green-800">Desde $15.000</p>
+          <a class="mt-3 inline-block text-green-800 underline" href="./html/reservas.html">Reservar</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Planes -->
+    <section class="bg-green-800 py-8 text-white">
+      <div class="mx-auto max-w-6xl p-4">
+        <h2 class="mb-6 text-center text-3xl font-bold">Planes de alquiler</h2>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <article class="rounded bg-white p-5 text-gray-900">
+            <h3 class="text-xl font-bold">Por horas</h3>
+            <p class="my-3">Para dar una vuelta y conocer la ciudad.</p>
+            <a class="text-green-800 underline" href="./html/reservas.html">Reservar ahora</a>
           </article>
-          <article class="rounded-3xl bg-leaf p-7 text-ink">
-            <p class="text-sm font-bold text-forest">02 / PARA EXPLORAR</p>
-            <h3 class="mt-4 font-display text-2xl font-extrabold">Medio día</h3>
-            <p class="mt-3 min-h-14 leading-7 text-forest/80">Tómate tu tiempo para conocer la ciudad y parar donde quieras.</p>
-            <a class="mt-6 inline-flex rounded-full bg-forest px-5 py-3 font-bold text-white transition hover:bg-ink" href="./html/reservas.html">Elegir este plan <span class="ml-2" aria-hidden="true">↗</span></a>
+          <article class="rounded bg-white p-5 text-gray-900">
+            <h3 class="text-xl font-bold">Medio día</h3>
+            <p class="my-3">Disfruta de un paseo más largo.</p>
+            <a class="text-green-800 underline" href="./html/reservas.html">Reservar ahora</a>
           </article>
-          <article class="rounded-3xl bg-white/10 p-7 ring-1 ring-white/15">
-            <p class="text-sm font-bold text-leaf">03 / TODO EL DÍA</p>
-            <h3 class="mt-4 font-display text-2xl font-extrabold">Día completo</h3>
-            <p class="mt-3 min-h-14 leading-7 text-white/75">La ciudad, las montañas y todo el camino que quieras recorrer.</p>
-            <a class="mt-6 inline-flex rounded-full bg-leaf px-5 py-3 font-bold text-ink transition hover:bg-white" href="./html/reservas.html">Elegir este plan <span class="ml-2" aria-hidden="true">↗</span></a>
+          <article class="rounded bg-white p-5 text-gray-900">
+            <h3 class="text-xl font-bold">Día completo</h3>
+            <p class="my-3">Explora Medellín durante todo el día.</p>
+            <a class="text-green-800 underline" href="./html/reservas.html">Reservar ahora</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="encuentranos" class="mx-auto grid max-w-7xl gap-8 px-5 py-16 sm:px-8 sm:py-20 md:grid-cols-2 md:items-center" aria-labelledby="contact-title">
-      <div>
-        <p class="text-sm font-bold uppercase tracking-[0.16em] text-forest">Estamos cerca</p>
-        <h2 id="contact-title" class="mt-3 font-display text-3xl font-extrabold sm:text-4xl">Nos vemos en Guayabal.</h2>
-        <p class="mt-4 max-w-lg leading-7 text-muted">Pasa por nuestra sede en Medellín, recoge tu bicicleta y empieza a rodar.</p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a class="rounded-full bg-forest px-5 py-3 font-bold text-white transition hover:bg-ink" href="https://www.google.com/maps/search/?api=1&amp;query=Guayabal+Medellin" target="_blank" rel="noopener noreferrer">Cómo llegar <span aria-hidden="true">↗</span></a>
-          <a class="rounded-full border border-line bg-paper px-5 py-3 font-bold text-forest transition hover:border-forest" href="mailto:contacto@ruedalibre.com">Escríbenos</a>
-        </div>
-      </div>
-      <div class="rounded-3xl border border-line bg-paper p-7 sm:p-9">
-        <p class="text-sm font-bold uppercase tracking-[0.14em] text-muted">Antes de salir</p>
-        <p class="mt-3 font-display text-2xl font-extrabold">Tu bici lista. Tú también.</p>
-        <ul class="mt-5 space-y-3 text-muted">
-          <li class="flex gap-3"><span class="font-bold text-forest">✓</span> Casco y candado incluidos</li>
-          <li class="flex gap-3"><span class="font-bold text-forest">✓</span> Atención todos los días, 7:00 a. m. – 6:00 p. m.</li>
-          <li class="flex gap-3"><span class="font-bold text-forest">✓</span> Lleva agua, bloqueador y documento de identidad</li>
-        </ul>
-      </div>
+    <!-- Contacto -->
+    <section id="encuentranos" class="mx-auto max-w-6xl p-6 py-8">
+      <h2 class="text-2xl font-bold">Encuéntranos en Guayabal</h2>
+      <p class="my-3 text-gray-700">Estamos ubicados en Medellín y atendemos todos los días de 7:00 a. m. a 6:00 p. m.</p>
+      <a class="mr-4 text-green-800 underline" href="https://www.google.com/maps/search/?api=1&amp;query=Guayabal+Medellin" target="_blank" rel="noopener noreferrer">Ver ubicación</a>
+      <a class="text-green-800 underline" href="mailto:contacto@ruedalibre.com">Escríbenos</a>
     </section>
   </main>
-  <footer class="bg-ink text-white">
-    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-8 sm:px-8 md:flex-row md:items-center md:justify-between">
-      <a class="font-display text-xl font-extrabold" href="./index.html">rueda<span class="text-leaf">libre.</span></a>
-      <p class="text-sm text-white/65">&copy; 2026 Rueda Libre. Medellín se disfruta sobre dos ruedas.</p>
-      <a class="text-sm font-semibold text-leaf hover:text-white" href="mailto:contacto@ruedalibre.com">Contacto</a>
-    </div>
+
+  <footer class="bg-gray-900 p-6 text-center text-white">
+    <p>&copy; 2026 Rueda Libre | Medellín, Colombia</p>
+    <a class="text-green-300 underline" href="mailto:contacto@ruedalibre.com">Contacto</a>
   </footer>
 </body>
 </html>
