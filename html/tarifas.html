@@ -1,224 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Tarifas</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
-        rel="stylesheet">
-
-    <!-- Estilos propios -->
-    <link rel="stylesheet" href="../css/tarifas.css">
-    <link rel="stylesheet" href="../css/styles.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consulta las tarifas de alquiler de bicicletas y recorridos de Rueda Libre en Medellín.">
+  <title>Tarifas | Rueda Libre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tailwind.css">
 </head>
-
 <body>
+  <header class="sticky top-0 z-30 border-b border-line bg-cream/95 backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-4 sm:px-8" aria-label="Navegación principal">
+      <a class="flex items-center gap-3" href="../index.html" aria-label="Rueda Libre, inicio">
+        <img class="h-11 w-11 rounded-full object-cover" src="../img/logo.jpeg" alt="">
+        <span class="font-display text-xl font-extrabold tracking-tight text-forest">rueda<span class="text-ink">libre.</span></span>
+      </a>
+      <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-semibold text-ink">
+        <a class="transition hover:text-forest" href="../index.html">Inicio</a>
+        <a class="transition hover:text-forest" href="./tarifas.html" aria-current="page">Tarifas</a>
+        <a class="transition hover:text-forest" href="../index.html#flota">Bicicletas</a>
+        <a class="rounded-full bg-forest px-5 py-2.5 text-white transition hover:bg-ink" href="./reservas.html">Reserva ahora <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Navegación -->
-    <iframe src="./nav.html"
-        width="100%"
-        height="100"
-        frameborder="0"
-        title="Nav bar">
-    </iframe>
+  <main class="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16">
+    <header class="mb-10 max-w-2xl">
+      <p class="text-sm font-bold uppercase tracking-[0.16em] text-forest">Precios claros, planes flexibles</p>
+      <h1 class="mt-3 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">Tarifas para salir a rodar.</h1>
+      <p class="mt-4 text-lg leading-7 text-muted">Elige tu bicicleta, decide cuánto tiempo quieres recorrer y deja que Medellín te sorprenda.</p>
+    </header>
 
+    <section class="mb-12" aria-labelledby="bike-rates-title">
+      <div class="mb-4 flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <p class="text-sm font-bold text-forest">ALQUILER DE BICICLETAS</p>
+          <h2 id="bike-rates-title" class="mt-1 font-display text-2xl font-extrabold">Tarifas por tiempo</h2>
+        </div>
+        <p class="text-sm text-muted">Precios en pesos colombianos</p>
+      </div>
+      <div class="overflow-x-auto rounded-3xl border border-line bg-paper">
+        <table class="w-full min-w-[600px] border-collapse text-left text-sm">
+          <caption class="sr-only">Tarifas de alquiler por tipo de bicicleta y duración</caption>
+          <thead class="bg-forest text-white">
+            <tr>
+              <th class="px-5 py-4 font-bold" scope="col">Tipo de bicicleta</th>
+              <th class="px-5 py-4 font-bold" scope="col">1 hora</th>
+              <th class="px-5 py-4 font-bold" scope="col">Medio día (4 h)</th>
+              <th class="px-5 py-4 font-bold" scope="col">Día completo</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line">
+            <tr class="hover:bg-cream/70"><th class="px-5 py-4 font-semibold" scope="row">Urbana</th><td class="px-5 py-4">$10.000</td><td class="px-5 py-4">$30.000</td><td class="px-5 py-4">$50.000</td></tr>
+            <tr class="hover:bg-cream/70"><th class="px-5 py-4 font-semibold" scope="row">Montaña</th><td class="px-5 py-4">$15.000</td><td class="px-5 py-4">$45.000</td><td class="px-5 py-4">$70.000</td></tr>
+            <tr class="hover:bg-cream/70"><th class="px-5 py-4 font-semibold" scope="row">Eléctrica</th><td class="px-5 py-4">$25.000</td><td class="px-5 py-4">$70.000</td><td class="px-5 py-4">$110.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    <main class="container py-5">
+    <section class="mb-12" aria-labelledby="route-rates-title">
+      <div class="mb-4">
+        <p class="text-sm font-bold text-forest">RECORRIDOS GUIADOS</p>
+        <h2 id="route-rates-title" class="mt-1 font-display text-2xl font-extrabold">Rutas para descubrir</h2>
+      </div>
+      <div class="overflow-x-auto rounded-3xl border border-line bg-paper">
+        <table class="w-full min-w-[650px] border-collapse text-left text-sm">
+          <caption class="sr-only">Tarifas semanales por recorrido guiado</caption>
+          <thead class="bg-forest text-white">
+            <tr>
+              <th class="px-5 py-4 font-bold" scope="col">Recorrido</th>
+              <th class="px-5 py-4 font-bold" scope="col">Distancia</th>
+              <th class="px-5 py-4 font-bold" scope="col">Duración</th>
+              <th class="px-5 py-4 font-bold" scope="col">Nivel</th>
+              <th class="px-5 py-4 font-bold" scope="col">Precio por semana</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line">
+            <tr class="hover:bg-cream/70"><th class="px-5 py-4 font-semibold" scope="row">Río y Parques</th><td class="px-5 py-4">12 km</td><td class="px-5 py-4">2 h</td><td class="px-5 py-4">Fácil</td><td class="px-5 py-4">$45.000</td></tr>
+            <tr class="hover:bg-cream/70"><th class="px-5 py-4 font-semibold" scope="row">Sabores de Barrio</th><td class="px-5 py-4">18 km</td><td class="px-5 py-4">3 h</td><td class="px-5 py-4">Medio</td><td class="px-5 py-4">$60.000</td></tr>
+            <tr class="hover:bg-cream/70"><th class="px-5 py-4 font-semibold" scope="row">Reto Las Palmas</th><td class="px-5 py-4">25 km</td><td class="px-5 py-4">4 h</td><td class="px-5 py-4">Difícil</td><td class="px-5 py-4">$85.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-        <!-- Encabezado -->
-        <header class="text-center mb-5">
+    <aside class="grid gap-8 rounded-3xl bg-paper p-7 sm:p-9 md:grid-cols-[1fr_auto] md:items-center">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.14em] text-forest">Todo listo para tu paseo</p>
+        <h2 class="mt-2 font-display text-2xl font-extrabold">Solo trae las ganas de explorar.</h2>
+        <p class="mt-3 text-muted">Todos los alquileres incluyen casco y candado. Para los recorridos, trae ropa cómoda, agua, protector solar y tu documento.</p>
+      </div>
+      <a class="inline-flex items-center justify-center gap-2 rounded-full bg-leaf px-6 py-3.5 font-bold text-ink transition hover:shadow-lg" href="./reservas.html">Reservar una bicicleta <span aria-hidden="true">↗</span></a>
+    </aside>
+  </main>
 
-            <h1 class="display-5 fw-bold mb-3">
-                Tarifas
-            </h1>
-
-            <h4 class="text-secondary">
-                Aquí encontrarás las tarifas más económicas de todo el mercado de renting
-            </h4>
-
-        </header>
-
-
-        <!-- Tarifas por tiempo -->
-        <section class="mb-5">
-
-            <div class="table-responsive border rounded">
-
-                <table id="prices" class="table table-striped table-hover align-middle mb-0">
-
-                    <caption class="caption-top text-center fw-bold fs-5">
-                        Tarifas por tiempo 2026
-                    </caption>
-
-                    <thead class="table-dark">
-
-                        <tr>
-                            <th scope="col">Tipo de bicicleta</th>
-                            <th scope="col">1 hora</th>
-                            <th scope="col">Medio día (4h)</th>
-                            <th scope="col">Día completo</th>
-                        </tr>
-
-                    </thead>
-
-                    <tbody>
-
-                        <tr>
-                            <td>Urbana</td>
-                            <td>$10.000</td>
-                            <td>$30.000</td>
-                            <td>$50.000</td>
-                        </tr>
-
-                        <tr>
-                            <td>Montaña</td>
-                            <td>$15.000</td>
-                            <td>$45.000</td>
-                            <td>$70.000</td>
-                        </tr>
-
-                        <tr>
-                            <td>Eléctrica</td>
-                            <td>$25.000</td>
-                            <td>$70.000</td>
-                            <td>$110.000</td>
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
-            </div>
-
-        </section>
-
-
-        <!-- Tarifas por recorrido -->
-        <section class="mb-5">
-
-            <div class="table-responsive border rounded">
-
-                <table id="trip" class="table table-striped table-hover align-middle mb-0">
-
-                    <caption class="caption-top text-center fw-bold fs-5">
-                        Tarifas por recorrido 2026
-                    </caption>
-
-                    <thead class="table-dark">
-
-                        <tr>
-                            <th scope="col">Recorrido</th>
-                            <th scope="col">Distancia</th>
-                            <th scope="col">Duración</th>
-                            <th scope="col">Nivel</th>
-                            <th scope="col">Precio por semana</th>
-                        </tr>
-
-                    </thead>
-
-                    <tbody>
-
-                        <tr>
-                            <td>Río y Parques</td>
-                            <td>12 km</td>
-                            <td>2h</td>
-                            <td>Fácil</td>
-                            <td>$45.000</td>
-                        </tr>
-
-                        <tr>
-                            <td>Sabores de Barrio</td>
-                            <td>18 km</td>
-                            <td>3h</td>
-                            <td>Medio</td>
-                            <td>$60.000</td>
-                        </tr>
-
-                        <tr>
-                            <td>Reto las Palmas</td>
-                            <td>25 km</td>
-                            <td>4h</td>
-                            <td>Difícil</td>
-                            <td>$85.000</td>
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
-            </div>
-
-        </section>
-
-
-        <!-- Información adicional -->
-        <aside class="border rounded p-4 mt-5">
-
-            <div class="row align-items-center g-4">
-
-                <div class="col-12 col-md-8">
-
-                    <a href="./reservas.html" class="btn btn-primary mb-4">
-                        Reservar ahora
-                    </a>
-
-                    <h2 class="mb-3">
-                        Info:
-                    </h2>
-
-                    <p>
-                        Información importante sobre los servicios:
-                    </p>
-
-                    <ul>
-                        <li>Todos incluyen casco y candado</li>
-                        <li>Los recorridos salen sábados y domingos a las 7:00 a.m.</li>
-                        <li>Llevar: ropa cómoda, agua, protector solar y documento de identidad.</li>
-                    </ul>
-
-                </div>
-
-
-                <div class="col-12 col-md-4 text-center">
-
-                    <img src="./img/logo.jpeg"
-                        alt="Logo"
-                        class="img-fluid rounded"
-                        style="max-width: 180px;">
-
-                </div>
-
-
-                <div class="col-12">
-
-                    <a href="../index.html" class="btn btn-outline-secondary">
-                        Volver al inicio
-                    </a>
-
-                </div>
-
-            </div>
-
-        </aside>
-
-    </main>
-
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js">
-    </script>
-
+  <footer class="bg-ink text-white">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-8 sm:px-8 md:flex-row md:items-center md:justify-between">
+      <a class="font-display text-xl font-extrabold" href="../index.html">rueda<span class="text-leaf">libre.</span></a>
+      <p class="text-sm text-white/65">&copy; 2026 Rueda Libre. Medellín se disfruta sobre dos ruedas.</p>
+      <a class="text-sm font-semibold text-leaf hover:text-white" href="mailto:contacto@ruedalibre.com">Contacto</a>
+    </div>
+  </footer>
 </body>
-
-</html> 
+</html>
