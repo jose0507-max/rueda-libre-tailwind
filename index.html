@@ -1,577 +1,76 @@
 <!doctype html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Rueda libre | alquiler de bicicletas en Medellín</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX"
-        crossorigin="anonymous">
-
-    <!-- Hoja de estilos externa -->
-    <link rel="stylesheet" href="./css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alquila bicicletas en Medellín y descubre la ciudad a tu propio ritmo con Rueda Libre.">
+  <title>Rueda Libre | Medellín sobre dos ruedas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/tailwind.css">
 </head>
-
 <body>
+  <header class="sticky top-0 z-30 border-b border-line bg-cream/95 backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-4 sm:px-8" aria-label="Navegación principal">
+      <a class="flex items-center gap-3" href="./index.html" aria-label="Rueda Libre, inicio">
+        <img class="h-11 w-11 rounded-full object-cover" src="./img/logo.jpeg" alt="">
+        <span class="font-display text-xl font-extrabold tracking-tight text-forest">rueda<span class="text-ink">libre.</span></span>
+      </a>
+      <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-semibold text-ink">
+        <a class="transition hover:text-forest" href="./index.html" aria-current="page">Inicio</a>
+        <a class="transition hover:text-forest" href="./html/tarifas.html">Tarifas</a>
+        <a class="transition hover:text-forest" href="#flota">Bicicletas</a>
+        <a class="rounded-full bg-forest px-5 py-2.5 text-white transition hover:bg-ink" href="./html/reservas.html">Reserva ahora <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Navegación -->
-    <iframe src="./html/nav.html"
-        width="100%"
-        height="100"
-        frameborder="0"
-        title="Nav bar">
-    </iframe>
-
-    <div class="to-do" id="card"></div>
-
-    <main>
-
-        <!-- Portada -->
-        <section class="portada container-fluid py-5 text-center">
-
-            <div class="container py-4">
-
-                <h1 class="display-4 fw-bold mb-3">
-                    Rueda libre
-                </h1>
-
-                <p class="lead mb-4">
-                    Bienvenido a rueda libre... alquila una bicicleta y rueda con
-                    tranquilidad, somos tu mejor servicio y aliado.
-
-                    <a href="#encuentranos">
-                        Encuéntranos en Guayabal
-                    </a>
-                </p>
-
-                <a href="./html/reservas.html" class="btn-cta">
-                    Reservar ahora
-                </a>
-
+  <main>
+    <section class="mx-auto grid max-w-7xl items-center gap-12 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[1fr_0.95fr] lg:py-24">
+      <div>
+        <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-line bg-paper px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-forest">
+          <span class="h-2 w-2 rounded-full bg-coral"></span> Medellín, Colombia
+        </p>
+        <h1 class="max-w-2xl font-display text-5xl font-extrabold leading-[1.05] tracking-tight text-ink sm:text-6xl lg:text-7xl">
+          La ciudad se ve mejor <span class="text-forest">en bici.</span>
+        </h1>
+        <p class="mt-6 max-w-xl text-lg leading-8 text-muted">
+          Alquila tu bicicleta y encuentra otra forma de recorrer Medellín. Fácil, flexible y a tu propio ritmo.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a class="inline-flex items-center gap-3 rounded-full bg-leaf px-6 py-3.5 font-bold text-ink transition hover:-translate-y-0.5 hover:shadow-lg" href="./html/reservas.html">
+            Encuentra tu bici <span aria-hidden="true">↗</span>
+          </a>
+          <a class="px-3 py-3 font-semibold text-forest underline decoration-line underline-offset-4 hover:decoration-forest" href="#como-funciona">Cómo funciona</a>
+        </div>
+        <div class="mt-12 flex items-center gap-4 border-t border-line pt-6">
+          <div class="flex -space-x-3" aria-hidden="true">
+            <img class="h-10 w-10 rounded-full border-2 border-cream object-cover" src="./img/plegable.jpeg" alt="">
+            <img class="h-10 w-10 rounded-full border-2 border-cream object-cover" src="./img/trail.jpeg" alt="">
+            <img class="h-10 w-10 rounded-full border-2 border-cream object-cover" src="./img/electrica.jpeg" alt="">
+          </div>
+          <p class="text-sm text-muted"><span class="font-bold text-ink">Una bici para cada plan.</span><br>Tu próxima aventura empieza aquí.</p>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute -left-5 -top-5 h-28 w-28 rounded-full bg-leaf sm:-left-7 sm:-top-7"></div>
+        <figure class="relative overflow-hidden rounded-[2rem] bg-forest shadow-xl">
+          <img class="h-[360px] w-full object-cover sm:h-[480px]" src="./img/bici.jpeg" alt="Bicicleta lista para salir a recorrer Medellín">
+          <figcaption class="absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-ink/80 to-transparent p-6 pt-20 text-white sm:p-8">
+            <div>
+              <p class="text-sm font-semibold text-leaf">TU RUTA, TUS REGLAS</p>
+              <p class="mt-1 font-display text-2xl font-bold">Sal a descubrir</p>
             </div>
-
-        </section>
-
-
-        <!-- Información general -->
-        <section class="container py-5">
-
-            <div class="row g-4">
-
-                <div class="col-12 col-md-6">
-
-                    <div class="border rounded p-4 h-100">
-
-                        <h2 class="mb-3">
-                            ¿Quiénes somos?
-                        </h2>
-
-                        <p class="mb-0">
-                            Somos tu mejor servicio y aliado para alquilar bicicletas en Medellín.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-12 col-md-6">
-
-                    <div class="border rounded p-4 h-100">
-
-                        <h2 class="mb-3">
-                            <a href="./html/tarifas.html">
-                                Nuestros servicios
-                            </a>
-                        </h2>
-
-                        <p class="mb-0">
-                            Alquiler de bicicletas por horas, días y premium.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-12">
-
-                    <div class="border rounded p-4">
-
-                        <h2 class="mb-3">
-                            ¿Cómo alquilar?
-                        </h2>
-
-                        <ol class="mb-0">
-                            <li>Selecciona el tipo de bicicleta que deseas alquilar</li>
-                            <li>Selecciona el tiempo que deseas alquilar la bicicleta</li>
-                            <li>Realiza el pago y disfruta de tu bicicleta</li>
-                            <li>Devuelve la bicicleta en el tiempo acordado</li>
-                        </ol>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- Flota de bicicletas -->
-        <section class="flota container-fluid py-5">
-
-            <div class="container">
-
-                <h2 class="text-center mb-4">
-                    Flota de Bicicletas
-                </h2>
-
-                <div class="row justify-content-center g-4">
-
-                    <!-- Bicicleta 1 -->
-                    <div class="col-12 col-md-6 col-lg-4">
-
-                        <div class="card h-100">
-
-                            <img src="./img/TRAIL.jpeg"
-                                class="card-img-top"
-                                alt="Bicicleta trail">
-
-                            <div class="card-body d-flex flex-column">
-
-                                <h2 class="card-title">
-                                    Urbana clásica
-                                </h2>
-
-                                <p>
-                                    Cómoda y liviana para las ciclorrutas.
-                                </p>
-
-                                <p>
-                                    Precio: $10.000
-                                </p>
-
-                                <a href="" class="btn btn-primary mt-auto align-self-end">
-                                    Reservar
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Bicicleta 2 -->
-                    <div class="col-12 col-md-6 col-lg-4">
-
-                        <div class="card h-100">
-
-                            <img src="./img/TRAIL.jpeg"
-                                class="card-img-top"
-                                alt="Bicicleta trail">
-
-                            <div class="card-body d-flex flex-column">
-
-                                <h2 class="card-title">
-                                    Urbana plegable
-                                </h2>
-
-                                <p>
-                                    Se dobla en segundos; ideal para combinar con el metro.
-                                </p>
-
-                                <p>
-                                    Precio: $12.000
-                                </p>
-
-                                <a href="" class="btn btn-primary mt-auto align-self-end">
-                                    Reservar
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Bicicleta 3 -->
-                    <div class="col-12 col-md-6 col-lg-4">
-
-                        <div class="card h-100">
-
-                            <img src="./img/TRAIL.jpeg"
-                                class="card-img-top"
-                                alt="Bicicleta trail">
-
-                            <div class="card-body d-flex flex-column">
-
-                                <h2 class="card-title">
-                                    Montaña Trail
-                                </h2>
-
-                                <p>
-                                    Suspensión delantera y 21 cambios para las subidas.
-                                </p>
-
-                                <p>
-                                    Precio: $15.000
-                                </p>
-
-                                <a href="" class="btn btn-primary mt-auto align-self-end">
-                                    Reservar
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Bicicleta 4 -->
-                    <div class="col-12 col-md-6 col-lg-4">
-
-                        <div class="card h-100">
-
-                            <img src="./img/TRAIL.jpeg"
-                                class="card-img-top"
-                                alt="Bicicleta gravel">
-
-                            <div class="card-body d-flex flex-column">
-
-                                <h2 class="card-title">
-                                    Bicicleta Gravel
-                                </h2>
-
-                                <p>
-                                    Perfecta para rutas de tierra y caminos sin asfaltar.
-                                </p>
-
-                                <p>
-                                    Precio: $15.000
-                                </p>
-
-                                <a href="" class="btn btn-primary mt-auto align-self-end">
-                                    Reservar
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Bicicleta 5 -->
-                    <div class="col-12 col-md-6 col-lg-4">
-
-                        <div class="card h-100">
-
-                            <img src="./img/TRAIL.jpeg"
-                                class="card-img-top"
-                                alt="Bicicleta eléctrica">
-
-                            <div class="card-body d-flex flex-column">
-
-                                <h2 class="card-title">
-                                    Bicicleta Eléctrica
-                                </h2>
-
-                                <p>
-                                    Perfecta para recorridos largos y terrenos difíciles.
-                                </p>
-
-                                <p>
-                                    Precio: $20.000
-                                </p>
-
-                                <a href="" class="btn btn-primary mt-auto align-self-end">
-                                    Reservar
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Bicicleta 6 -->
-                    <div class="col-12 col-md-6 col-lg-4">
-
-                        <div class="card h-100">
-
-                            <img src="./img/TRAIL.jpeg"
-                                class="card-img-top"
-                                alt="Bicicleta infantil">
-
-                            <div class="card-body d-flex flex-column">
-
-                                <h2 class="card-title">
-                                    Bicicleta Infantil
-                                </h2>
-
-                                <p>
-                                    Perfecta para los más pequeños que quieren explorar la ciudad.
-                                </p>
-
-                                <p>
-                                    Precio: $15.000
-                                </p>
-
-                                <a href="" class="btn btn-primary mt-auto align-self-end">
-                                    Reservar
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- Planes de alquiler -->
-        <section class="container py-5">
-
-            <h2 class="text-center mb-4">
-                Planes de alquiler
-            </h2>
-
-            <div class="row justify-content-center g-4">
-
-                <!-- Servicio económico -->
-                <div class="col-12 col-md-6 col-lg-4">
-
-                    <article class="card h-100">
-
-                        <img src="./img/bici.jpeg"
-                            class="card-img-top"
-                            alt="Bicicleta disponible para alquiler en Rueda Libre">
-
-                        <div class="card-body d-flex flex-column">
-
-                            <h3 class="card-title">
-                                Servicio económico
-                            </h3>
-
-                            <h4 class="h5">
-                                Alquiler por horas
-                            </h4>
-
-                            <p>
-                                Alquila una bicicleta por horas y disfruta de la ciudad a tu ritmo.
-                            </p>
-
-                            <a href="./html/reservas.html"
-                                class="btn-cta mt-auto align-self-start">
-                                Reservar ahora
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-
-                <!-- Plan renta -->
-                <div class="col-12 col-md-6 col-lg-4">
-
-                    <article class="card h-100">
-
-                        <img src="./img/ruta.png"
-                            class="card-img-top"
-                            alt="Ruta recomendada para recorridos en bicicleta por Medellín">
-
-                        <div class="card-body d-flex flex-column">
-
-                            <h3 class="card-title">
-                                Plan renta
-                            </h3>
-
-                            <h4 class="h5">
-                                Alquiler por días
-                            </h4>
-
-                            <p>
-                                Alquila una bicicleta por días y explora la ciudad con comodidad.
-                            </p>
-
-                            <a href="./html/reservas.html"
-                                class="btn-cta mt-auto align-self-start">
-                                Reservar ahora
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-
-                <!-- Servicio premium -->
-                <div class="col-12 col-md-6 col-lg-4">
-
-                    <article class="card h-100">
-
-                        <div class="card-body d-flex flex-column">
-
-                            <span class="badge text-bg-success align-self-start mb-2">
-                                Nuevo
-                            </span>
-
-                            <h3 class="card-title">
-                                Servicio premium (Bicicletas eléctricas)
-                            </h3>
-
-                            <h4 class="h5">
-                                Alquiler de lujo
-                            </h4>
-
-                            <p>
-                                Alquila una bicicleta eléctrica o premium y disfruta de la mejor experiencia.
-                            </p>
-
-                            <a href="./html/reservas.html"
-                                class="btn-cta mt-auto align-self-start">
-                                Reservar ahora
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-
-                <!-- Plan renta premium -->
-                <div class="col-12 col-md-6 col-lg-4">
-
-                    <article class="card h-100">
-
-                        <div class="card-body d-flex flex-column">
-
-                            <h3 class="card-title">
-                                Plan renta premium
-                            </h3>
-
-                            <h4 class="h5">
-                                Alquiler premium
-                            </h4>
-
-                            <p>
-                                Alquila una bicicleta premium por días y disfruta de la mejor experiencia.
-                            </p>
-
-                            <a href="./html/reservas.html"
-                                class="btn-cta mt-auto align-self-start">
-                                Reservar ahora
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- Ubicación y contacto -->
-        <section id="encuentranos" class="container-fluid py-5">
-
-            <div class="container">
-
-                <div class="border rounded p-4">
-
-                    <h2 class="mb-3">
-                        Encuéntranos
-                    </h2>
-
-                    <p>
-                        Estamos ubicados en Guayabal, Medellín.
-                    </p>
-
-                    <p class="mb-0">
-
-                        <a href="https://www.google.com/maps/search/?api=1&query=Guayabal+Medellin"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            Nuestra ubicación en Google Maps
-                        </a>
-
-                        |
-
-                        <a href="mailto:contacto@ruedalibre.com">
-                            Enviar un correo a contacto@ruedalibre.com
-                        </a>
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- Footer -->
-    <footer>
-
-        <iframe src="./html/footer.html"
-            width="100%"
-            height="300px"
-            frameborder="0"
-            title="Pie de página">
-        </iframe>
-
-    </footer>
-
-
-    <!-- WhatsApp -->
-    <a href="https://wa.me"
-        class="btn-whatsapp"
-        target="_blank"
-        rel="noopener noreferrer">
-
-        WhatsApp
-
-    </a>
-
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
-        crossorigin="anonymous">
-    </script>
-
-    <!-- JavaScript propio -->
-    <script src="./index.js"></script>
-
+            <span class="grid h-12 w-12 place-items-center rounded-full bg-leaf text-xl text-ink" aria-hidden="true">↗</span>
+          </figcaption>
+        </figure>
+        <div class="absolute -bottom-5 -left-3 rounded-2xl bg-paper px-5 py-4 shadow-lg sm:-left-8">
+          <p class="text-xs font-bold uppercase tracking-wider text-muted">Hecho para moverte</p>
+          <p class="mt-1 font-display text-lg font-extrabold text-forest">Pedalea sin afán.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
-
 </html>
